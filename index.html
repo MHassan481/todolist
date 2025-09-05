@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1>From JS: <span id="numberDisplay"></span></h1>
+
+    <script>
+      function Person(name) {
+        this.name = name;
+      }
+
+      // Add a method to the prototype
+      Person.prototype.sayHello = function () {
+        return "Hello, my name is " + this.name;
+      };
+
+      const alice = new Person("Hassan");
+
+      console.log(alice.sayHello());
+
+      document.getElementById("numberDisplay").innerHTML = alice.sayHello();
+    </script>
+  </body>
+</html>

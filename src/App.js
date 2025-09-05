@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginForm from './app/components/login';
+import RegisterForm from './app/components/register';
+import FormikForm from './app/components/formikForm';
+import HomePage from './app/homepage';
+import FormikFormData from './app/components/formikFormData';
+import TodoList from './app/components/to-doList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/formikForm" element={<FormikForm />} />
+        <Route path="/formikFormData" element={<FormikFormData />} />
+        <Route path="/to-doList" element={<TodoList />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
