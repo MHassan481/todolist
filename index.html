@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>From JS: <span id="numberDisplay"></span></h1>
-
+    <h1>From JS: <span id="output"></span></h1>
+    <pre id="output"></pre>
     <script>
       function Person(name) {
         this.name = name;
@@ -23,7 +23,13 @@
 
       console.log(alice.sayHello());
 
-      document.getElementById("numberDisplay").innerHTML = alice.sayHello();
+      const rows = 5;
+      let starPattern = "";
+      for (let i = 1; i <= rows; i++) {
+        starPattern += `*`.repeat(i) + "<br>";
+      }
+
+      document.getElementById("output").innerHTML = starPattern;
     </script>
   </body>
 </html>
