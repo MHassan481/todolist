@@ -70,7 +70,7 @@ const TodoList = () => {
             <FieldArray name="todos">
               {({ remove, replace }) => (
                 <div>
-                  <p>{values.task}</p>
+                  <p className="text-2xl text-red-800">{values.task}</p>
                   {values.todos.length === 0 ? (
                     <p className="text-gray-500 text-center mt-6">
                       No tasks yet.

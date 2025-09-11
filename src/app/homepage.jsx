@@ -33,7 +33,7 @@ const HomePage = () => {
         </Link>
         <Link
           to="/to-doList"
-          className="block bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition"
+          className="block bg-black text-white py-2 px-4 rounded hover:bg-red-600 transition"
         >
           To-do List
         </Link>
