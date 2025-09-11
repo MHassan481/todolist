@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+<<<<<<< HEAD
     <h1>From JS: <span id="output"></span></h1>
+=======
+   <!-- <h1>From JS: <span id="output"></span></h1>
+>>>>>>> master
     <pre id="output"></pre>
     <script>
       function Person(name) {
@@ -29,7 +32,89 @@
         starPattern += `*`.repeat(i) + "<br>";
       }
 
+<<<<<<< HEAD
       document.getElementById("output").innerHTML = starPattern;
+=======
+      document.getElementById("output").innerHTML = starPattern; -->
+  
+
+    <h1>
+      solution:
+      <p id="problemSolving"></p>
+    </h1>
+
+    <script>
+      const array1D = [1, 2, 3, 4, 5];
+
+      const array2D = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+
+      const array3D = [
+        [
+          [1, 2],
+          [3, 4],
+        ],
+        [
+          [5, 6],
+          [7, 8],
+        ],
+      ];
+
+      const stringArray = ["apple", "banana", "cherry"];
+
+      const mixedArray = [1, "hello", true, null, { key: "value" }];
+
+      const boolArray = [true, false, true, true];
+
+      const emptyArray = [];
+
+      const zerosArray = new Array(5).fill(0);
+
+      const rangeArray = Array.from({ length: 10 }, (_, i) => i);
+
+      const jaggedArray = [[1, 2], [3, 4, 5], [6]];
+
+      let sum = 0;
+      for (let i = 0; i < array1D.length; i++) {
+        sum = sum + array1D[i];
+      }
+
+      let counter = 0;
+      for (let i = 0; i < boolArray.length; i++) {
+        if (boolArray[i] === true) {
+          counter++;
+        }
+      }
+
+      let flattened = [];
+      for (let i = 0; i < array2D.length; i++) {
+        const row = array2D[i];
+        for (let j = 0; j < row.length; j++) {
+          flattened.push(row[j]);
+        }
+      }
+
+      let max = array3D[0][0][0];
+      for (let i = 0; i < array3D.length; i++) {
+        console.log("i = "+ i);
+        for (let j = 0; j < array3D[i].length; j++) {
+          console.log("j = "+ j);
+           for (let k = 0; k < array3D[i][j].length; k++) {
+          console.log("k = "+ k);
+          const current = array3D[i][j][k];
+          if (current > max) {
+            max = current;
+          }
+        }
+        }
+       
+      }
+
+      document.getElementById("problemSolving").innerHTML = "Max values: " + max;
+>>>>>>> master
     </script>
   </body>
 </html>
